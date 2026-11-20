@@ -41,12 +41,6 @@ class Product(Base):
         cascade="all, delete-orphan"
     )
 
-    packaging_options = relationship(
-        "ProductPackaging",
-        back_populates="variant",
-        cascade="all, delete-orphan"
-    )
-
     category = relationship("Category")
 
     base_unit = relationship("Unit")
